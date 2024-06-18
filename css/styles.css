@@ -3,13 +3,65 @@
     padding: 0;
     box-sizing: border-box;
 }
+html{
+    background-color: #000308;
+}
 
 body{
     color: white;
-    background-color: rgb(61, 0, 119);
     min-height: 98vh;
+    min-height: 2000px;
+    background-color: rgba(16, 15, 54, 0.7);
+    overflow-x: hidden;
 }
 a{
     color: white;
     text-decoration: none;
+}
+
+
+header {
+    position: relative;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+}
+nav ul{
+    display: flex;
+    gap: 40px;
+}
+nav ul li{
+    list-style: none;
+}
+
+.hero img{
+    position: absolute;
+    width: 100%;
+}
+/* .hero_filter {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 90vh;
+    background-color: rgba(16, 15, 54,0.6);
+} */
+.hero_rocks{
+    z-index: -2;
+}
+.hero_planet{
+    z-index: -3;
+}
+.hero_bg{
+    z-index: -4;
+}
+.hero_text{
+    position: absolute;
+    padding: 300px;
+    width: 100%;
+    text-align: center;
 }
