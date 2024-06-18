@@ -1,3 +1,3 @@
 const test = parseInt(prompt("Cual es tu edad?"));
 
-alert(`Tu edad es ${test}`);
+document.write(`<h1>Tu edad es ${test}</h1>`);
