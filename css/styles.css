@@ -1,3 +1,23 @@
+@font-face {
+    font-family: "Poppins";
+    font-weight: 800;
+    src: url("../fonts/Poppins-Bold.ttf")format("truetype");
+}
+@font-face {
+    font-family: "Poppins";
+    font-weight: 700;
+    src: url("../fonts/Poppins-SemiBold.ttf")format("truetype");
+}
+@font-face {
+    font-family: "Poppins";
+    font-weight: 600;
+    src: url("../fonts/Poppins-Regular.ttf")format("truetype");
+}
+@font-face {
+    font-family: "Poppins";
+    font-weight: 400;
+    src: url("../fonts/Poppins-Light.ttf")format("truetype");
+}
 *{
     margin: 0;
     padding: 0;
@@ -13,6 +33,9 @@ body{
     min-height: 2000px;
     background-color: rgba(16, 15, 54, 0.7);
     overflow-x: hidden;
+    font-size: 1.5rem;
+    font-family: "Poppins";
+    font-weight: 400;
 }
 a{
     color: white;
@@ -22,14 +45,18 @@ a{
 
 header {
     position: relative;
+    height: 800px;
 }
 nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 40px 120px;
     position: fixed;
     width: 100%;
+    animation: blur linear both;
+    animation-timeline: scroll();
+    animation-range: 0 500px;
 }
 nav ul{
     display: flex;
@@ -38,6 +65,30 @@ nav ul{
 nav ul li{
     list-style: none;
 }
+.nav_logo{
+    font-weight: 800;
+    font-size: 2rem;
+}
+.nav_link_active{
+    font-weight: 800;
+}
+.nav_button{
+    color: #CC00D0;
+    border: 2px solid #CC00D0;
+    padding: 10px 40px;
+    border-radius: 30px;
+    font-weight: 600;
+}
+
+@keyframes blur {
+    to {
+        box-shadow: 0px 5px 50px -5px rgba(10, 11, 37, 0.1) 0px 0px 0px 1px rgba(10, 11, 37, 0.);
+        background: rgba(10, 11, 37, 0.6);
+        backdrop-filter: blur(8px);
+    }
+}
+
+
 
 .hero img{
     position: absolute;
@@ -61,7 +112,151 @@ nav ul li{
 }
 .hero_text{
     position: absolute;
-    padding: 300px;
+    padding-top: 280px;
     width: 100%;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 140px;
+}
+.hero_text p{
+    width: 680px;
+}
+.hero_button{
+    color: #CC00D0;
+    border: 2px solid #CC00D0;
+    padding: 10px 40px;
+    font-size: 2rem;
+    font-weight: 700;
+    border-radius: 40px;
+    width: 260px;
+}
+
+
+/***************    SECTION PRODUCTS   ****************/
+.section_products{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 300px 0px;
+    padding: 0 120px;
+}
+.product{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+}
+.product p{
+    width: 360px;
+}
+.product_icon_cont{
+    border-radius: 100% ;
+    border: 2px solid white;
+    width: 123px;
+    height: 123px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.product_separator{
+    width: 2px;
+    height: 330px;
+    background-color: white;
+}
+.product:hover .product_icon_cont{
+    border-color: #CC00D0;
+}
+.product:hover h2{
+    color: #CC00D0;
+}
+.product:hover p{
+    color: #FDAAFF;
+}
+
+
+
+/******************    SECTION CARDS   ****************/
+.section_cards{
+    text-align: center;
+    margin: 0 120px;
+}
+.cards_container{
+    margin: 80px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+.card{
+    width: 589px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+    padding: 60px 60px;
+    cursor: pointer;
+    text-align: left;
+    background-color: #0B0D3B;
+    border-radius: 20px;
+}
+.card h3{
+    color: #CC00D0;
+}
+.card p{
+    width: 446px;
+    color: #FDAAFF;
+}
+.card a{
+    width: 100%;
+    text-align: right;
+}
+.card:hover{
+    filter: drop-shadow(3px 5px 14px #CC00D0);
+}
+
+
+
+/******************    SECTION CALL TO ACTION   ****************/
+.section_call_to_action{
+    margin: 300px 120px;
+    background-color: #0B0D3B;
+    text-align: center;
+    padding: 80px;
+    height: 591px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.section_call_to_action h2{
+    color: #CC00D0;
+}
+.section_call_to_action p{
+    width: 700px;
+}
+.section_call_to_action a{
+    color: #CC00D0;
+    border: 2px solid #CC00D0;
+    border-radius: 60px;
+    padding: 10px 60px;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+
+/******************    SECTION FOOTER   ****************/
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0B0D3B;
+    height: 200px;
 }
