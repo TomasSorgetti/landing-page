@@ -2,6 +2,13 @@ const scrollElements = document.querySelectorAll(".js_scroll");
 const planet = document.querySelector(".hero_planet");
 const rocks = document.querySelector(".hero_rocks");
 const bg = document.querySelector(".hero_bg");
+// Typing animation
+let typed = new Typed(".auto-typer", {
+  strings: ["First sentence", "Second sentence"],
+  typeSpeed: 300,
+  backSpeed: 150,
+  loop: true,
+});
 
 const elementInView = (el, dividend = 1) => {
   const elementTop = el.getBoundingClientRect().top;
@@ -30,7 +37,7 @@ const hideScrollElement = (element) => {
 
 const handleScrollAnimation = () => {
   scrollElements.forEach((el) => {
-    if (elementInView(el, 1)) {
+    if (elementInView(el, 0.5)) {
       displayScrollElement(el);
     } else if (elementOutofView(el)) {
       hideScrollElement(el);
