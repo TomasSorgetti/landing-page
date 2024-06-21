@@ -38,12 +38,13 @@ body {
   min-height: 98vh;
   min-height: 2000px;
   background-color: rgba(16, 15, 54, 0.7);
-  overflow-x: hidden;
   font-size: 1.5rem;
   font-family: "Poppins";
   font-weight: 400;
   max-width: 1680px;
   margin: 0 auto;
+  overflow-x: hidden;
+
 }
 a {
   color: white;
@@ -53,6 +54,7 @@ a {
 header {
   position: relative;
   height: 800px;
+  overflow: hidden;
 }
 nav {
   z-index: 10;
@@ -116,15 +118,7 @@ nav ul li {
     height: 90vh;
     background-color: rgba(16, 15, 54,0.6);
 } */
-.hero_rocks {
-  z-index: -2;
-}
-.hero_planet {
-  z-index: -3;
-}
-.hero_bg {
-  z-index: -4;
-}
+
 .hero_text {
   position: absolute;
   padding-top: 280px;
@@ -265,7 +259,7 @@ nav ul li {
   transform: translate(-80px, 0px);
 }
 .phone_svg{
-  transform: translate();
+  overflow: visible;
 }
 .phone_text{
   flex: 0.5;
@@ -375,4 +369,137 @@ footer {
   justify-content: center;
   background-color: var(--blue_color);
   height: 200px;
+}
+
+
+/*! ANIMACIONES */
+.js_scroll {
+  opacity: 0;
+  transition: opacity 2000ms;
+}
+
+.js_scroll.scrolled {
+  opacity: 1;
+}
+
+.scrolled.fade-in {
+  animation: fade-in 1s ease-in-out both;
+}
+
+.scrolled.fade-in-bottom {
+  animation: fade-in-bottom 1s ease-in-out both;
+}
+
+.scrolled.slide-left {
+  animation: slide-in-left 2s ease-in-out both;
+}
+
+.scrolled.slide-right {
+  animation: slide-in-right 1s ease-in-out both;
+}
+
+.scrolled.ball1{
+  animation: slide-in-left 1s ease-in-out both;
+}
+.scrolled.ball2{
+  animation: slide-in-left 1.3s ease-in-out both;
+}
+.scrolled.ball3{
+  animation: slide-in-left 1.5s ease-in-out both;
+}
+
+.scrolled.slide-right-1{
+  animation: slide-in-right 1s ease-in-out;
+}
+.scrolled.slide-right-2{
+  animation: slide-in-right 1.2s ease-in-out;
+}
+.scrolled.slide-right-3{
+  animation: slide-in-right 1.4s ease-in-out;
+}
+.scrolled.slide-right-4{
+  animation: slide-in-right 1.6s ease-in-out;
+}
+.scrolled.slide-right-5{
+  animation: slide-in-right 1.8s ease-in-out;
+}
+.scrolled.slide-right-6{
+  animation: slide-in-right 2s ease-in-out;
+}
+
+
+@keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-100px);
+    transform: translateX(-100px);
+    /* opacity: 0; */
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-right {
+  0% {
+    -webkit-transform: translateX(300px);
+    transform: translateX(300px);
+    /* opacity: 0; */
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    /* opacity: 1; */
+  }
+}
+
+@keyframes fade-in-bottom {
+  0% {
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px);
+    /* opacity: 0; */
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-top {
+  0% {
+    -webkit-transform: translateY(-50px);
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.hero_rocks {
+  z-index: -2;
+}
+.hero_planet {
+  z-index: -3;
+}
+.hero_bg {
+  z-index: -4;
 }
