@@ -36,11 +36,11 @@ html {
 body {
   color: white;
   min-height: 98vh;
-  min-height: 2000px;
   background-color: rgba(16, 15, 54, 0.7);
   font-size: 1.5rem;
   font-family: "Poppins";
   font-weight: 400;
+  width: 100%;
   max-width: 1680px;
   margin: 0 auto;
   overflow-x: hidden;
@@ -545,5 +545,147 @@ footer {
 
   100% {
     opacity: 1;
+  }
+}
+
+
+@media screen and (max-width: 1440px) {
+  .card{
+    width: 49%;
+    height: 300px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  body{
+    font-size: 1.3rem;
+  }
+  nav{
+    padding: 20px 60px;
+  }
+  #hero_subtitle{
+    font-size: 3rem;
+  }
+  .hero_button{
+    font-size: 1.8rem;
+    width: 220px;
+  }
+  .section_products{
+    margin: 200px 0px;
+    padding: 0px 60px;
+  }
+  .product p {
+    width: 300px;
+  }
+  .phone_container{
+    margin: 220px 60px;
+  }
+  .phone_text{
+    flex: 0.6;
+  }
+  .phone_svg{
+    width: 480px;
+  }
+  .section_cards{
+    margin: 0px 60px;
+  }
+  .card p{
+    margin: 20px 0px;
+  }
+  .section_call_to_action{
+    margin: 200px 60px;
+  }
+}
+
+@media screen and (max-width: 1024px){
+  body{
+    font-size: 1.2rem;
+  }
+  nav{
+    padding: 20px 40px;
+  }
+  h1{
+    font-size: 3.6rem;
+  }
+  .nav_button{
+    padding: 8px 30px;
+  }
+  #hero_subtitle{
+    font-size: 2.8rem;
+  }
+  .hero_button{
+    font-size: 1.4rem;
+    width: 200px;
+  }
+  .hero_text p {
+    width: 540px;
+  }
+  .section_products{
+    margin: 100px 0px;
+    padding: 0px 40px;
+  }
+  .product p {
+    width: 280px;
+  }
+  .phone_container{
+    height: 360px;
+    padding: 30px;
+    margin-bottom: 180px;
+  }
+  .phone_svg{
+    width: 380px;
+  }
+  .phone_text a{
+    margin-top: 30px;
+  }
+  .card{
+    width: 48%;
+    height: 240px;
+    padding: 30px;
+  }
+  .card p{
+    width: 400px;
+  }
+  .section_call_to_action{
+    height: 520px;
+  }
+  .section_call_to_action p{
+    width: 630px;
+  }
+  .section_call_to_action h2{
+    font-size: 3rem;
+  }
+  .section_call_to_action a{
+    font-size: 1.8rem;
+    padding: 8px 40px;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .section_products{
+    flex-direction: column;
+    margin-top: 0px;
+    gap: 40px;
+  }
+  .product_separator{
+    display: none;
+  }
+
+  .cards_container{
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  .card{
+    width: 100%;
+    height: 320px;
+    padding: 60px;
+  }
+  .card h3{
+    font-size: 2rem;
+  }
+  .card a{
+    font-size: 2rem;
+  }
+  .section_call_to_action p{
+    width: 520px;
   }
 }
