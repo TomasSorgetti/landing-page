@@ -5,8 +5,8 @@ const bg = document.querySelector(".hero_bg");
 // Typing animation
 let typed = new Typed(".auto-typer", {
   strings: ["First sentence", "Second sentence"],
-  typeSpeed: 300,
-  backSpeed: 150,
+  typeSpeed: 230,
+  backSpeed: 160,
   loop: true,
 });
 

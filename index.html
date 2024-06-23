@@ -12,6 +12,8 @@
     ></script>
     <!-- Styles -->
     <link rel="stylesheet" href="css/styles.css" />
+    <!-- CDN Animations AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <!-- Title -->
     <title>Boilerplate</title>
   </head>
@@ -56,7 +58,7 @@
       <!-- Icons cards section -->
       <div class="section_products">
         <!-- First card -->
-        <article class="product js_scroll">
+        <article class="product" data-aos="zoom-in" data-aos-duration="1000">
           <!-- Animated wheel -->
           <div class="product_icon_cont">
             <i class="fa-solid fa-lightbulb"></i>
@@ -101,7 +103,7 @@
         <div class="product_separator"></div>
 
         <!-- Second card -->
-        <article class="product js_scroll">
+        <article class="product" data-aos="zoom-in" data-aos-duration="1000">
           <!-- Animated wheel -->
           <div class="product_icon_cont">
             <i class="fa-solid fa-chart-simple"></i>
@@ -146,7 +148,7 @@
         <div class="product_separator"></div>
 
         <!-- Third card -->
-        <article class="product js_scroll">
+        <article class="product" data-aos="zoom-in" data-aos-duration="1000">
           <!-- Animated wheel -->
           <div class="product_icon_cont">
             <i class="fa-solid fa-lightbulb"></i>
@@ -190,7 +192,7 @@
       </div>
 
       <!-- phone section -->
-      <div class="phone_container js_scroll fade-in-bottom">
+      <div class="phone_container" data-aos="fade-up" data-aos-duration="2000">
         <svg
           class="phone_svg"
           width="563"
@@ -201,7 +203,9 @@
           xmlns:xlink="http://www.w3.org/1999/xlink"
         >
           <rect
-            class="js_scroll slide-left"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+            data-aos-delay="1000"
             x="21"
             y="82"
             width="354"
@@ -209,7 +213,9 @@
             fill="url(#pattern0_138_2)"
           />
           <ellipse
-            class="js_scroll ball1"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+            data-aos-delay="0"
             cx="457.5"
             cy="68"
             rx="67.5"
@@ -218,7 +224,9 @@
             fill-opacity="0.47"
           />
           <ellipse
-            class="js_scroll ball2"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+            data-aos-delay="300"
             cx="34"
             cy="378.5"
             rx="34"
@@ -227,7 +235,9 @@
             fill-opacity="0.67"
           />
           <ellipse
-            class="js_scroll ball3"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+            data-aos-delay="600"
             cx="83"
             cy="61.5"
             rx="62"
@@ -236,7 +246,9 @@
             fill-opacity="0.24"
           />
           <rect
-            class="js_scroll slide-left"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+            data-aos-delay="1000"
             x="190"
             width="373"
             height="626"
@@ -281,15 +293,15 @@
         </svg>
         <hr />
         <div class="phone_text">
-          <h2 class="js_scroll slide-right-1">Lorem ipsum</h2>
+          <h2 data-aos="fade-left" data-aos-duration="1000">Lorem ipsum</h2>
           <ul>
-            <li class="js_scroll slide-right-2">itemlist 1</li>
-            <li class="js_scroll slide-right-3">itemlist 2</li>
-            <li class="js_scroll slide-right-4">itemlist 3</li>
-            <li class="js_scroll slide-right-5">itemlist 4</li>
-            <li class="js_scroll slide-right-6">itemlist 5</li>
+            <li data-aos="fade-left" data-aos-duration="1200">itemlist 1</li>
+            <li data-aos="fade-left" data-aos-duration="1400">itemlist 2</li>
+            <li data-aos="fade-left" data-aos-duration="1600">itemlist 3</li>
+            <li data-aos="fade-left" data-aos-duration="1800">itemlist 4</li>
+            <li data-aos="fade-left" data-aos-duration="2000">itemlist 5</li>
           </ul>
-          <a class="buttons js_scroll slide-right-4" href="#">Button</a>
+          <a data-aos="fade-left" data-aos-duration="2200" href="#">Button</a>
         </div>
       </div>
 
@@ -304,7 +316,7 @@
         <!-- Content cards main container -->
         <div class="cards_container">
           <!-- card - 1 -->
-          <article class="card js_scroll .fade-in">
+          <article class="card" data-aos="zoom-in" data-aos-duration="1000">
             <h3>Lorem ipsum</h3>
             <p>
               Lorem ipsum dolor sit amet consecte Lorem ipsum dolor sit amet
@@ -313,7 +325,7 @@
             <a href="#"><i class="fa-solid fa-arrow-right-long"></i></a>
           </article>
           <!-- card - 2 -->
-          <article class="card js_scroll .fade-in">
+          <article class="card" data-aos="zoom-in" data-aos-duration="1800">
             <h3>Lorem ipsum</h3>
             <p>
               Lorem ipsum dolor sit amet consecte Lorem ipsum dolor sit amet
@@ -322,7 +334,7 @@
             <a href="#"><i class="fa-solid fa-arrow-right-long"></i></a>
           </article>
           <!-- card - 3 -->
-          <article class="card js_scroll .fade-in">
+          <article class="card" data-aos="zoom-in" data-aos-duration="1000">
             <h3>Lorem ipsum</h3>
             <p>
               Lorem ipsum dolor sit amet consecte Lorem ipsum dolor sit amet
@@ -331,7 +343,7 @@
             <a href="#"><i class="fa-solid fa-arrow-right-long"></i></a>
           </article>
           <!-- card - 4 -->
-          <article class="card js_scroll .fade-in">
+          <article class="card" data-aos="zoom-in" data-aos-duration="1800">
             <h3>Lorem ipsum</h3>
             <p>
               Lorem ipsum dolor sit amet consecte Lorem ipsum dolor sit amet
@@ -340,7 +352,7 @@
             <a href="#"><i class="fa-solid fa-arrow-right-long"></i></a>
           </article>
           <!-- card - 5 -->
-          <article class="card js_scroll .fade-in">
+          <article class="card" data-aos="zoom-in" data-aos-duration="1000">
             <h3>Lorem ipsum</h3>
             <p>
               Lorem ipsum dolor sit amet consecte Lorem ipsum dolor sit amet
@@ -349,7 +361,7 @@
             <a href="#"><i class="fa-solid fa-arrow-right-long"></i></a>
           </article>
           <!-- card - 6 -->
-          <article class="card js_scroll .fade-in">
+          <article class="card" data-aos="zoom-in" data-aos-duration="1800">
             <h3>Lorem ipsum</h3>
             <p>
               Lorem ipsum dolor sit amet consecte Lorem ipsum dolor sit amet
@@ -363,7 +375,11 @@
       </section>
 
       <!-- Last content CTA -->
-      <section class="section_call_to_action">
+      <section
+        class="section_call_to_action"
+        data-aos="fade-up"
+        data-aos-duration="1800"
+      >
         <!-- Title -->
         <h2>Lorem ipsum</h2>
         <!-- Description -->
@@ -383,6 +399,10 @@
 
     <!-- Scripts and prefixer -->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script src="scripts/prefixer.min.js"></script>
     <script src="scripts/main.js"></script>
   </body>

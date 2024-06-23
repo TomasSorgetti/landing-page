@@ -116,7 +116,7 @@ nav ul li {
   align-items: center;
   gap: 40px;
   transition: all 1s ease;
-  animation: hero_text_animation 1s ease-in;
+  animation: hero_text_animation 1s linear;
 }
 
 h1{
@@ -161,9 +161,9 @@ h1{
   justify-content: center;
   text-align: center;
   cursor: pointer;
-}
-.scrolled.product{
-  animation: zoom-in 0.5s ease-in;
+  /* animation: zoom-in linear forwards;
+  animation-timeline: view();
+  animation-range: entry 500px; */
 }
 
 .product p {
@@ -239,8 +239,11 @@ h1{
 
 .product:hover {
   transform: translateY(-20px);
+  transition: all 1s ease-in-out;
 }
-
+.product:not(:hover) {
+  transition: all 0.5s ease-in-out;
+}
 
 /******************    SECTION PHONE   ****************/
 .phone_container{
@@ -469,11 +472,11 @@ footer {
 }
 
 @keyframes zoom-in {
-  0%{
-    transform: scale(0.5);
+  from{
+    scale: 0.7;
     opacity: 0;
   }
-  100%{
+  to{
     transform: scale(1);
     opacity: 1;
   }
