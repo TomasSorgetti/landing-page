@@ -4,7 +4,7 @@ const rocks = document.querySelector(".hero_rocks");
 const bg = document.querySelector(".hero_bg");
 // Typing animation
 let typed = new Typed(".auto-typer", {
-  strings: ["First sentence", "Second sentence"],
+  strings: ["dolor amet", "sin itur decen"],
   typeSpeed: 230,
   backSpeed: 160,
   loop: true,
@@ -50,5 +50,5 @@ window.addEventListener("scroll", () => {
   handleScrollAnimation();
   planet.style.left = value * 0.2 + "px";
   rocks.style.top = value * 0.3 + "px";
-  bg.style.top = value * 0.2 + "px";
+  // bg.style.top = value * 0.4 + "px";
 });
