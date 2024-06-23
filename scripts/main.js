@@ -53,9 +53,18 @@ window.addEventListener("scroll", () => {
   // bg.style.top = value * 0.4 + "px";
 });
 
-//***** Hamburger menu *****/ 
-window.addEventListener("click", () => {
-  const menu = document.querySelector(".hamburger_menu_button");
-  menu.classList.toggle("open");
-  document.querySelector(".nav_links").classList.toggle("open");
-});
+//***** Hamburger menu *****/
+document
+  .querySelector(".hamburger_menu_button")
+  .addEventListener("click", () => {
+    const menu = document.querySelector(".hamburger_menu_button");
+    menu.classList.toggle("open");
+    document.querySelector(".nav_links").classList.toggle("open");
+  });
+
+document.querySelectorAll(".nav_link").forEach((link) => {
+  link.addEventListener("click", () => {
+    document.querySelector(".hamburger_menu_button").classList.remove("open");
+    document.querySelector(".nav_links").classList.remove("open");
+  })
+})
