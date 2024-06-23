@@ -99,8 +99,23 @@ nav ul li {
     transition: 1s;
 }
 
+/************ Hamburger Menu ***********/
+.hamburger_menu_button{
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+.hamburger_menu_icon{
+  width: 20px;
+  height: 2px;
+  background-color: white;
+  transition: all 0.3s ease;
+}
 
-/* Header styles */
+/**** Header styles ****/
 .hero img {
   position: absolute;
   width: 100%;
@@ -285,6 +300,7 @@ h1{
   border-radius: 40px;
   color: var(--main_color);
   font-weight: 700;
+  text-align: center;
 }
 
 /******************    SECTION CARDS   ****************/
@@ -598,7 +614,7 @@ footer {
 
 @media screen and (max-width: 1024px){
   body{
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
   nav{
     padding: 20px 40px;
@@ -661,15 +677,67 @@ footer {
 }
 
 @media screen and (max-width: 768px){
+  .hamburger_menu_button{
+    display: flex;
+  }
+  .hamburger_menu_button.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .hamburger_menu_button.open span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger_menu_button.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+  .nav_links{
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    right: -100%;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    background-color: var(--blue_color);
+    transition: transform 0.45s ease;
+  }
+  .nav_links.open {
+  transform: translateX(-100%);
+}
   .section_products{
     flex-direction: column;
     margin-top: 0px;
-    gap: 40px;
+    gap: 80px;
   }
   .product_separator{
     display: none;
   }
 
+  .phone_container hr{
+    display: none;
+  }
+  .phone_container {
+    margin-top: 300px;
+    flex-direction: column;
+    height: 700px;
+  }
+  .phone_svg_container{
+    height: 1px;
+  }
+  .phone_svg{
+    transform: translateY(-320px);
+  }
+  .phone_text{
+    flex: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .phone_text ul{
+    margin: 0;
+  }
   .cards_container{
     flex-direction: column;
     flex-wrap: nowrap;
@@ -688,4 +756,52 @@ footer {
   .section_call_to_action p{
     width: 520px;
   }
+}
+
+@media screen and (max-width: 640px){
+  body{
+    font-size: 1.1rem;
+  }
+  nav{
+    padding: 20px 20px;
+  }
+  nav a{
+    font-size: 1.4rem;
+  }
+  h1{
+    font-size: 3rem;
+  }
+  #hero_subtitle{
+    font-size: 2.4rem;
+  }
+  .section_products{
+    padding: 0px 20px;
+  }
+  .phone_container{
+    margin: 160px 20px;
+  }
+  .phone_text {
+    margin-top: 0px;
+  }
+  .section_cards{
+    margin: 0px 20px;
+  }
+  .section_call_to_action{
+    margin: 160px 20px;
+    height: 420px;
+  }
+  .section_call_to_action p{
+    width: 460px;
+  }
+  .section_call_to_action a{
+    font-size: 1.4rem;
+    padding: 8px 30px;
+  }
+}
+
+@media screen and (max-width: 360px){
+  body{
+    font-size: 1rem;
+  }
+
 }

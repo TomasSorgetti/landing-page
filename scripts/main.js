@@ -52,3 +52,10 @@ window.addEventListener("scroll", () => {
   rocks.style.top = value * 0.3 + "px";
   // bg.style.top = value * 0.4 + "px";
 });
+
+//***** Hamburger menu *****/ 
+window.addEventListener("click", () => {
+  const menu = document.querySelector(".hamburger_menu_button");
+  menu.classList.toggle("open");
+  document.querySelector(".nav_links").classList.toggle("open");
+});
