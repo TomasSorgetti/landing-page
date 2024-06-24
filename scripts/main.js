@@ -10,6 +10,15 @@ let typed = new Typed(".auto-typer", {
   loop: true,
 });
 
+//!!!!!!!! Right click disable !!!!!!!!!!/
+document.addEventListener(
+  "contextmenu",
+  function (e) {
+    e.preventDefault();
+  },
+  false
+);
+
 const elementInView = (el, dividend = 1) => {
   const elementTop = el.getBoundingClientRect().top;
 
@@ -66,5 +75,5 @@ document.querySelectorAll(".nav_link").forEach((link) => {
   link.addEventListener("click", () => {
     document.querySelector(".hamburger_menu_button").classList.remove("open");
     document.querySelector(".nav_links").classList.remove("open");
-  })
-})
+  });
+});

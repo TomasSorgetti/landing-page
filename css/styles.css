@@ -366,6 +366,7 @@ h1{
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  border-radius: 20px;
 }
 .section_call_to_action h2 {
   color: var(--main_color);
@@ -780,6 +781,9 @@ footer {
   .section_products{
     padding: 0px 20px;
   }
+  .card{
+    border-radius: 8px;
+  }
   .phone_container{
     margin: 340px 20px 100px 20px;
     height: 620px;
@@ -793,6 +797,7 @@ footer {
   .section_call_to_action{
     margin: 160px 20px;
     height: 420px;
+    border-radius: 8px;
   }
   .section_call_to_action p{
     width: 460px;
@@ -803,21 +808,55 @@ footer {
   }
 }
 
-@media screen and (max-width: 360px){
+@media screen and (max-width: 340px){
   body{
     font-size: 1rem;
   }
+  header{
+    height: 600px;
+  }
+  h1{
+    font-size: 2.6rem;
+  }
+  #hero_subtitle{
+    font-size: 1.4rem;
+  }
+  .hero_button{
+    margin-top: 0px;
+  }
+  .hero_text{
+    padding-top: 140px;
+  }
+  .hero_text p{
+    width: 260px;
+  }
   .phone_container{
-    height: 580px;
+    height: 540px;
+    margin-top: 300px;
+  }
+  .phone_svg{
+    width: 260px;
   }
   .card{
-    padding: 30px;
+    padding: 20px;
+    height: 250px;
   }
   .card h3{
     font-size: 1.8rem;
   }
   .card p{
     width: 280px;
+    margin: 0px;
   }
-
+  .section_call_to_action{
+    padding: 20px;
+    height: 390px;
+    justify-content: space-around;
+  }
+  .section_call_to_action h2{
+    font-size: 2rem;
+  }
+  .section_call_to_action p{
+    max-width: 260px;
+  }
 }
