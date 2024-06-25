@@ -130,8 +130,8 @@ nav ul li {
   flex-direction: column;
   align-items: center;
   gap: 40px;
-  transition: all 1s ease;
-  animation: hero_text_animation 1s linear;
+  /* transition: all 1s ease;
+  animation: hero_text_animation 1s linear; */
 }
 
 h1{
